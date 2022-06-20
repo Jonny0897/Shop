@@ -1,0 +1,28 @@
+<div class="container d-flex justify-content-center align-items-center">
+    <div>
+        <h1 class="title"> {{ title }} </h1>
+        <form class="formBox" [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class=" mb-1">
+                <label for="email" class="form-label"></label>
+                <input formControlName="email" type="email" class="form-control" id="email" placeholder="Email">
+                <span *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger"> Email Invalid </span>
+            </div>
+            <div class="pwd">
+                <label for="password" class="form-label"> </label>
+                <input formControlName="password" type="password" class="form-control" id="inputPassword"
+                    placeholder="Password">
+                <span *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger"> Password Invalid
+                </span>
+            </div>
+            <div class="fPwd">
+                <p>
+                    <a class="text-light" routerLink='/changePwd'> Forgot password </a>
+                </p>
+            </div>
+            <div class=" btns register d-flex justify-left"> 
+                    <button type="submit" class="btn btn-light" value="signin" (click)="login()">Log In </button>
+                        <a class="signin text-light" routerLink='/'> Sign In</a>
+            </div>
+        </form>
+    </div>
+</div>

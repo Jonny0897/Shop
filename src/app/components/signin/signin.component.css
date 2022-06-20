@@ -1,0 +1,47 @@
+.container {
+    width: 500px;
+    height: 550px;
+    background-color: #80c5f7;
+    border-radius: 10px;
+    position: relative;
+    top: 80px;
+}
+
+.title {
+    color: white;
+    position: relative;
+    bottom: 20px;
+}
+
+.formBox{
+    width: 300px;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover{
+    opacity: 0.6;
+}
+
+.login{
+    text-align: center;
+    position: relative;
+    left: 50px;
+}
+
+.fPwd {
+    position: relative;
+    bottom: 15px;
+    cursor: pointer;
+}
+
+.btn {
+    width: 150px;
+}
+
+.btn:hover{
+    opacity: 0.6; 
+}

@@ -1,0 +1,54 @@
+.container {
+    width: 500px;
+    height: 550px;
+    background-color: #80c5f7;
+    border-radius: 10px;
+    position: relative;
+    top: 80px;
+}
+
+.title {
+    color: white;
+    position: relative;
+    bottom: 10px;
+}
+
+.formBox{
+    width: 300px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover{
+    opacity: 0.6;
+}
+
+.fPwd {
+    position: relative;
+    top: 5px;
+    cursor: pointer;
+}
+
+.btn {
+    position: relative;
+    top: 50px;
+    width: 150px;
+}
+
+.btn:hover{
+    opacity: 0.6; 
+}
+
+.signin{
+    text-align: center;
+    position: relative;
+    left: 50px;
+    top: 55px;
+}
+
+.btns{
+    position: relative;
+    bottom: 20px;
+}
