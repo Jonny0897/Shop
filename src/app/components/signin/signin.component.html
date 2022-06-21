@@ -1,29 +1,29 @@
 <div class="container d-flex justify-content-center align-items-center">
     <div>
         <h1 class="title">{{ title }} </h1>
-        <form class="formBox" [formGroup]="signinForm"> 
+        <form class="formBox" [formGroup]="signinForm" (ngSubmit)="signin()"> 
             <div class="username mb-2">
                 <label for="username" class="form-label"> </label>
-                <input formControlName="username" type="text" class="form-control" id="Username" placeholder="Username"
+                <input formControlName="username" type="text" class="form-control shadow-none " id="Username" placeholder="Username"
                     required>
                 <span *ngIf="username.invalid && (username.dirty || username.touched)" class="text-light"> Invalid Username
                 </span>
             </div>
             <div class="email mb-2">
                 <label for="email" class="form-label"></label>
-                <input formControlName="email" type="email" class="form-control" id="email" placeholder="Email"
+                <input formControlName="email" type="email" class="form-control shadow-none " id="email" placeholder="Email"
                     required>
                 <span *ngIf="email && email.touched && email.invalid" class="text-light"> Email Invalid</span>
             </div>
             <div class=" pwd mb-2">
                 <label for="password" class="form-label"> </label>
-                <input formControlName="password" type="password" class="form-control" id="inputPassword"
+                <input formControlName="password" type="password" class="form-control shadow-none " id="inputPassword"
                     placeholder="Password" required="">
                 <span *ngIf="password && password.touched && password.invalid" class="text-light"> Password Invalid </span>
             </div>
             <div class="confimfPwd mb-4">
                 <label for="confirmPassword" class="form-label"> </label>
-                <input formControlName="confirmPassword" type="password" class="form-control" id="confirmPassword"
+                <input formControlName="confirmPassword" type="password" class="form-control shadow-none " id="confirmPassword"
                     placeholder="Confirm Password" appPasswordValidation="password" required>
                     <span *ngIf="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)" class="text-danger"> Password Invalid
                     </span>
@@ -34,7 +34,7 @@
                 </p>
             </div>
             <div class="d-flex justify-left align-items-center"> 
-                <button type="submit"  class="btn btn-light" value="signin" (click)="signin()" >Sign In </button>
+                <button type="submit"  class="btn btn-light shadow-none " value="signin" (click)="signin()" >Sign In </button>
                         <a class="login text-light" routerLink='/login'> Log In </a>
             </div>
         </form>

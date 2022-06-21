@@ -10,6 +10,7 @@ import { SigninComponent } from './components/signin/signin.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MainHomeComponent } from './components/main-home/main-home.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     LoginComponent,
     SigninComponent,
     HomeComponent,
-    CartComponent
+    CartComponent,
+    MainHomeComponent
   ],
   imports: [
     BrowserModule,

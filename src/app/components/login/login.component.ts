@@ -5,6 +5,7 @@ import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -23,7 +24,7 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private http: HttpClient,
     private router: Router,
-    private titlePage: Title
+    private titlePage: Title,
   ) { 
     this.titlePage.setTitle("Log In")
   }
@@ -38,17 +39,20 @@ export class LoginComponent implements OnInit {
   login(): void {
     this.loading = true;
     this.http.get<any>("http://localhost:3000/Users")
-      .subscribe(res => {
-        const user = res.find((u: any) => {
-          return u.email && this.loginForm.value.email && u.password && this.loginForm.value.password
-        });
-        if (user) {
-          this.router.navigate(['home']);
-          this.loading = false;
-        } else {
-          alert("Something went wrong!");
-        }
-      })
+    .subscribe( res=> {
+      const user = res.find((u:any) => {
+        return u.email === this.loginForm.value.email && u.password === this.loginForm.value.password;
+      });
+      if (user) {
+        alert("Success Log In");
+        this.loginForm.reset();
+        this.router.navigate(['home'])
+      } else {
+        alert("User not Found");
+      }
+    }, err =>{
+      alert("something went wrong")
+    })
   }
 
   get email() {

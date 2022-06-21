@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "users": [
+    {
+      "username": "pippo",
+      "email": "pippo@gmail.com",
+      "password": "pippo123",
+      "confirmPassword": "pippo123",
+      "id": 1
+    },
+    {
+      "username": "person",
+      "email": "person@gmail.com",
+      "password": "person1234",
+      "confirmPassword": "person1234",
+      "id": 2
+    },
+    {
+      "username": "pluto",
+      "email": "pluto@gmail.com",
+      "password": "pluto1234",
+      "confirmPassword": "pluto1234",
+      "id": 3
+    },
+    {
+      "username": "",
+      "email": "",
+      "password": "",
+      "confirmPassword": "",
+      "id": 4
+    },
+    {
+      "username": "",
+      "email": "",
+      "password": "",
+      "confirmPassword": "",
+      "id": 5
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
