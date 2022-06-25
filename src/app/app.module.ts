@@ -11,6 +11,8 @@ import { HomeComponent } from './components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MainHomeComponent } from './components/main-home/main-home.component';
+import { FiltersComponent } from './components/filters/filters.component';
+
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { MainHomeComponent } from './components/main-home/main-home.component';
     SigninComponent,
     HomeComponent,
     CartComponent,
-    MainHomeComponent
+    MainHomeComponent,
+    FiltersComponent,
+
   ],
   imports: [
     BrowserModule,

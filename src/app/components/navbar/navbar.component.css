@@ -1,6 +1,6 @@
 .navbar {
-    width: 100%;
     background-color: #80c5f7;
+    height: 85px;
 }
 
 h1:hover{
@@ -8,14 +8,4 @@ h1:hover{
     cursor: pointer;
 }
 
-.searchbar{
-    width: 300px;
-}
 
-.btn:hover{
-    opacity: 0.6;
-}
-
-.btn{
-    color: white;
-}
