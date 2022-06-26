@@ -1,9 +1,9 @@
 .sidebar {
     position: fixed;
-    left: 0;
+    left: 10px;
     top: 125px;
     height: 100%;
-    width: 260px;
+    width: 400px;
 }
 
 .form-search{
@@ -25,5 +25,11 @@
 }
 
 .section{
-    position: fixed;
+    position: relative;
+    top: 80px;
+}
+
+.list-group-item:hover{
+    opacity: 0.6;
+    cursor:pointer;
 }
