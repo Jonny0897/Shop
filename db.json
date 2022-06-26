@@ -6,41 +6,13 @@
       "author": "typicode"
     }
   ],
-  "users": [
+  "Users": [
     {
       "username": "user",
       "email": "user@gmail.com",
       "password": "user12345",
       "confirmPassword": "user12345",
       "id": 1
-    },
-    {
-      "username": "ciao",
-      "email": "ciao@gmail.com",
-      "password": "ciaociaociao",
-      "confirmPassword": "ciaociaociao",
-      "id": 3
-    },
-    {
-      "username": "pippo",
-      "email": "pippo@gmail.com",
-      "password": "pippo12345",
-      "confirmPassword": "pippo12345",
-      "id": 4
-    },
-    {
-      "username": "lupo",
-      "email": "lupo@gmail.com",
-      "password": "lupo12345",
-      "confirmPassword": "lupo12345",
-      "id": 5
-    },
-    {
-      "username": "lupo",
-      "email": "lupo@gmail.com",
-      "password": "lupo12345",
-      "confirmPassword": "lupo12345",
-      "id": 6
     }
   ],
   "profile": {

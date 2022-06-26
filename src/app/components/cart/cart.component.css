@@ -1,0 +1,8 @@
+.cart:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.cart{
+    font-size: 38px;
+}

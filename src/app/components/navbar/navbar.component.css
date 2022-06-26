@@ -1,6 +1,10 @@
 .navbar {
-    background-color: #80c5f7;
-    height: 85px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #80c5f7;   
+    max-height: 88px;
 }
 
 h1:hover{

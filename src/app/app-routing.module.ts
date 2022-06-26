@@ -6,6 +6,8 @@ import { SigninComponent } from './components/signin/signin.component';
 import { LoginComponent } from './components/login/login.component';
 import { MainHomeComponent } from './components/main-home/main-home.component';
 import { FiltersComponent } from './components/filters/filters.component';
+import { CartComponent } from './components/cart/cart.component';
+import { NavCartComponent } from './components/nav-cart/nav-cart.component';
 
 
 const routes: Routes = [
@@ -14,7 +16,8 @@ const routes: Routes = [
   { path: '', component: NavbarComponent}, 
   { path: 'home', component: HomeComponent },
   { path: '', component: MainHomeComponent},
-  { path: '', component: FiltersComponent}
+  { path: '', component: FiltersComponent},
+  { path: 'cart', component: NavCartComponent }
 
 ];
 
