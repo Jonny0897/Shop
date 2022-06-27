@@ -13,6 +13,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MainHomeComponent } from './components/main-home/main-home.component';
 import { FiltersComponent } from './components/filters/filters.component';
 import { NavCartComponent } from './components/nav-cart/nav-cart.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 
 
@@ -28,6 +29,7 @@ import { NavCartComponent } from './components/nav-cart/nav-cart.component';
     MainHomeComponent,
     FiltersComponent,
     NavCartComponent,
+    SearchBarComponent,
 
   ],
   imports: [

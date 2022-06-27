@@ -2,14 +2,12 @@
     position: fixed;
     left: 10px;
     top: 125px;
-    height: 100%;
-    width: 400px;
 }
 
 .form-search{
     position: relative;
     top: 45px;
-    width: 380px;
+    max-width: 350px;
 }
 
 .btn{
@@ -20,13 +18,10 @@
     opacity: 0.6;
 }
 
-.searchbar{
-    border-color: black ;
-}
-
-.section{
+.form{
     position: relative;
     top: 80px;
+    left: 10px;
 }
 
 .list-group-item:hover{
