@@ -1,0 +1,16 @@
+.container{
+    background-color: grey;
+    margin-top: 132px;
+    max-width: 60%;
+    height: 100%;
+}
+
+.box{
+    width: 100%;
+}
+
+.form-select{
+    width: 110px;
+}
+
+

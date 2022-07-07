@@ -11,9 +11,8 @@ import { HomeComponent } from './components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FiltersComponent } from './components/filters/filters.component';
+import { MainHomeComponent } from './components/main-home/main-home.component';
 import { NavCartComponent } from './components/nav-cart/nav-cart.component';
-import { SearchBarComponent } from './components/search-bar/search-bar.component';
-
 
 
 
@@ -27,16 +26,15 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
     HomeComponent,
     CartComponent,
     FiltersComponent,
-    NavCartComponent,
-    SearchBarComponent,
-
+    MainHomeComponent,
+    NavCartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

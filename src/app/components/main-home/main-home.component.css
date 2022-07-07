@@ -1,0 +1,25 @@
+.searchbar{
+    position: relative;
+    top: 90px;
+}
+
+.products{
+    align-items: center;
+    position: relative;
+    top: 72px;
+    left: 110px;
+    margin-top: 50px;
+}
+
+.item{
+    background-color: rgb(143, 143, 143);
+}
+
+.btn:hover{
+    opacity: 0.6;
+}
+
+.btn{
+    border: none;
+}
+

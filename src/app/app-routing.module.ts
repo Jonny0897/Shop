@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: '', component: SigninComponent },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'cart', component: NavCartComponent }
+  { path: 'navcart', component: NavCartComponent },
+
 
 ];
 
