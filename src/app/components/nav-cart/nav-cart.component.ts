@@ -15,8 +15,6 @@ export class NavCartComponent implements OnInit {
     { id: 3, name: "product3", price: 61, type: "product1" },
     ];
 
-
-
   constructor(
     private cartService: CartService) { }
 
@@ -25,6 +23,12 @@ export class NavCartComponent implements OnInit {
 
   hiddenTotal(): boolean{
     return this.items.length != 0;
+  }
+
+  totalPrice(): number {
+   let tot: number = 0;
+   this.items.filter(i => tot = i.price + tot);
+    return tot;
   }
 
 }

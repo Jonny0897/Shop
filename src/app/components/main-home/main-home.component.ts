@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Items } from 'src/app/assets/mock/items';
 import { ITEMS } from 'src/app/assets/mock/mock-items';
 import { CartService } from 'src/app/service/cart.service';
+import { CartComponent } from '../cart/cart.component';
 
 @Component({
   selector: 'app-main-home',
@@ -14,9 +15,9 @@ export class MainHomeComponent implements OnInit {
   productFilters: string = 'all';
   filterProduct: Items[] = [];
 
-
   constructor(
-    private cartService: CartService
+    private cartService: CartService,
+    // private cart: CartComponent
   ) {
   }
 
@@ -41,6 +42,7 @@ export class MainHomeComponent implements OnInit {
 
   addToCart(product: Items){
     this.cartService.addToCart(product);
+    // this.cart.quantity ++;
   }
 
 }
