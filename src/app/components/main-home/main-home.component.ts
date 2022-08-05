@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Items } from 'src/app/assets/mock/items';
-import { ITEMS } from 'src/app/assets/mock/mock-items';
-import { CartService } from 'src/app/service/cart.service';
+import { Items } from 'src/assets/mock/items';
+import { ITEMS } from 'src/assets/mock/mock-items';
+import { CartService } from 'src/app/services/cart.service';
 import { CartComponent } from '../cart/cart.component';
 
 @Component({

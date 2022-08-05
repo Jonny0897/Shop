@@ -11,15 +11,18 @@
     margin-top: 50px;
 }
 
-.item{
-    background-color: rgb(143, 143, 143);
-}
 
 .btn:hover{
     opacity: 0.6;
 }
 
-.btn{
+.btn-add{
+    background-color: #80c5f7;
     border: none;
+}
+
+.img{
+    height: 300px;
+    width: 300px;
 }
 

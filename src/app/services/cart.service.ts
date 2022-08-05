@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Items } from '../assets/mock/items';
+import { Items } from 'src/assets/mock/items';
+
 
 @Injectable({
   providedIn: 'root'
@@ -14,13 +15,8 @@ export class CartService {
     this.products.push(product);
   }
 
-  getProduct() {
-    console.log(this.products.entries);
-  }
-
   clearCart() {
-    this.products = [];
-    return this.products;
+    return this.products = [];
   }
 
   removeFromCart(product : Items) {

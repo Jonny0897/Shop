@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from 'src/app/service/cart.service';
+import { CartService } from 'src/app/services/cart.service';
+import { ITEMS } from 'src/assets/mock/mock-items';
 
 @Component({
   selector: 'nav-cart',
@@ -9,11 +10,12 @@ import { CartService } from 'src/app/service/cart.service';
 export class NavCartComponent implements OnInit {
 
     // items = this.cartService.getProducts();
-    items = [
-    { id: 1, name: "product1", price: 20, type: "product1" },
-    { id: 2, name: "product2", price: 14, type: "product1" },
-    { id: 3, name: "product3", price: 61, type: "product1" },
-    ];
+    // items = [
+    // { id: 1, name: "product1", price: 20, type: "product1" },
+    // { id: 2, name: "product2", price: 14, type: "product1" },
+    // { id: 3, name: "product3", price: 61, type: "product1" },
+    // ];
+     items = ITEMS;
 
   constructor(
     private cartService: CartService) { }

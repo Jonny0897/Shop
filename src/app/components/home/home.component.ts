@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Items } from 'src/app/assets/mock/items';
-import { ITEMS } from 'src/app/assets/mock/mock-items';
+import { Items } from 'src/assets/mock/items';
+import { ITEMS } from 'src/assets/mock/mock-items';
 
 
 @Component({

@@ -1,5 +1,4 @@
 .container{
-    background-color: grey;
     margin-top: 132px;
     max-width: 60%;
     height: 100%;
@@ -9,8 +8,16 @@
     width: 100%;
 }
 
-.form-select{
-    width: 110px;
+.img{
+    height: 200px;
+    width: 150px;
 }
+
+.description{
+    position: relative;
+    top: 1px;
+}
+
+
 
 

@@ -13,6 +13,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FiltersComponent } from './components/filters/filters.component';
 import { MainHomeComponent } from './components/main-home/main-home.component';
 import { NavCartComponent } from './components/nav-cart/nav-cart.component';
+import { BackgroundHoverDirective } from './directives/background-hover.directive';
+import { SelectComponent } from './components/commons/select/select.component';
 
 
 
@@ -27,7 +29,9 @@ import { NavCartComponent } from './components/nav-cart/nav-cart.component';
     CartComponent,
     FiltersComponent,
     MainHomeComponent,
-    NavCartComponent
+    NavCartComponent,
+    BackgroundHoverDirective,
+    SelectComponent
   ],
   imports: [
     BrowserModule,
