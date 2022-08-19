@@ -15,8 +15,7 @@ import { MainHomeComponent } from './components/main-home/main-home.component';
 import { NavCartComponent } from './components/nav-cart/nav-cart.component';
 import { BackgroundHoverDirective } from './directives/background-hover.directive';
 import { SelectComponent } from './components/commons/select/select.component';
-
-
+import { RemoveButtonComponent } from './components/commons/remove-button/remove-button.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +30,8 @@ import { SelectComponent } from './components/commons/select/select.component';
     MainHomeComponent,
     NavCartComponent,
     BackgroundHoverDirective,
-    SelectComponent
+    SelectComponent,
+    RemoveButtonComponent
   ],
   imports: [
     BrowserModule,

@@ -8,8 +8,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class FiltersComponent implements OnInit {
 
   @Input() all: number = 0;
-  @Input() product1: number = 0;
-  @Input() product2: number = 0;
+  @Input() novels: number = 0;
+  @Input() manga: number = 0;
 
 
   selectedRadioButtonValue: string = 'all';

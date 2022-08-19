@@ -1,12 +1,12 @@
-<div class="container-fluid">
+<div class="container">
     <div class="filter">
-        <app-filters [all]="getAllProduct()" [product1]="getProduct1()" [product2]="getProduct2()"
+        <app-filters [all]="getAllProduct()" [novels]="getNovels()" [manga]="getManga()"
             (filterRadioChanged)="onFilterRadioChanged($event)">
         </app-filters>
     </div>
-    <div class="products container justify-content-end">
+    <div class="products container">
         <div class="row align-self-center">
-            <div class="row g-4 ">
+            <div class="row g-2">
                 <ng-container *ngFor="let item of items" #valueP>
                     <div class="col-md-3" *ngIf="productFilters === 'all' || productFilters === item.type">
                         <div class="item">
@@ -16,9 +16,9 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="details-item">
-                                        <h3 class="details d-flex justify-content-start"> {{item.name}} </h3>
+                                        <h3 class="details d-flex justify-content-start"> {{item.title}} </h3>
                                         <span>
-                                             di <h6 class="list-inline-item">Autore</h6>
+                                             di <h6 class="list-inline-item">{{item.author}}</h6>
                                         </span>
                                         <h5 class="details"> {{ item.price + "€"}} </h5>
                                     </div>

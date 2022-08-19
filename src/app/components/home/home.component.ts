@@ -24,12 +24,12 @@ export class HomeComponent implements OnInit {
     return this.items.length;
   }
 
-  getProduct1() {
-    return this.items.filter(product => product.type == "product1").length;
+  getNovels() {
+    return this.items.filter(product => product.type == "novels").length;
   }
 
-  getProduct2() {
-    return this.items.filter(product => product.type == "product2").length;
+  getManga() {
+    return this.items.filter(product => product.type == "manga").length;
   }
 
   onFilterRadioChanged(dataFilter: string) {

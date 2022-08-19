@@ -1,6 +1,7 @@
 export interface Items{
     id: number;
-    name: string;
+    title: string;
+    author: string;
     price: number;
     type: string;
     img: string;

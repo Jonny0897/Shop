@@ -1,5 +1,4 @@
 .sidebar {
-   display: flex;
     position: fixed;
     left: 30px;
     top: 73px;
@@ -11,9 +10,4 @@
 .filters{
     position: relative;
     top: 47px;
-}
-
-.list-group-item:hover{
-    opacity: 0.6;
-    cursor:pointer;
 }

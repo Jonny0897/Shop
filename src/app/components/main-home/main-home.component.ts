@@ -17,7 +17,6 @@ export class MainHomeComponent implements OnInit {
 
   constructor(
     private cartService: CartService,
-    // private cart: CartComponent
   ) {
   }
 
@@ -28,12 +27,12 @@ export class MainHomeComponent implements OnInit {
     return this.items.length;
   }
 
-  getProduct1() {
-    return this.items.filter(product => product.type == "product1").length;
+  getNovels() {
+    return this.items.filter(product => product.type == "novels").length;
   }
 
-  getProduct2() {
-    return this.items.filter(product => product.type == "product2").length;
+  getManga() {
+    return this.items.filter(product => product.type == "manga").length;
   }
 
   onFilterRadioChanged(dataFilter: string) {
@@ -42,7 +41,6 @@ export class MainHomeComponent implements OnInit {
 
   addToCart(product: Items){
     this.cartService.addToCart(product);
-    // this.cart.quantity ++;
   }
 
 }
