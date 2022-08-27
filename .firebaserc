@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "shop-351b7": {
+      "hosting": {
+        "app-shop": [
+          "shop-351b7"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "shop-351b7"
+  }
+}
