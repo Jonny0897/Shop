@@ -13,7 +13,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CartComponent } from './components/cart/cart.component';
 import { LoginComponent } from './components/login/login.component'
 import { SigninComponent } from './components/signin/signin.component';
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FiltersComponent } from './components/filters/filters.component';
@@ -22,7 +22,7 @@ import { NavCartComponent } from './components/nav-cart/nav-cart.component';
 import { BackgroundHoverDirective } from './directives/background-hover.directive';
 import { SelectComponent } from './components/commons/select/select.component';
 import { RemoveButtonComponent } from './components/commons/remove-button/remove-button.component';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { HomeCartComponent } from './pages/home-cart/home-cart.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,8 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
     NavCartComponent,
     BackgroundHoverDirective,
     SelectComponent,
-    RemoveButtonComponent
+    RemoveButtonComponent,
+    HomeCartComponent
   ],
   imports: [
     BrowserModule,

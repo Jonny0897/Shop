@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     private http: HttpClient,
     private router: Router,
     private titlePage: Title,
-  ) { 
+  ) {
     this.titlePage.setTitle("Log In")
   }
 
@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
         alert("User not Found");
       }
     }, err =>{
-      alert("something went wrong")
+      alert("something went wrong");
     })
   }
 

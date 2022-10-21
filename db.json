@@ -13,6 +13,79 @@
       "password": "user12345",
       "confirmPassword": "user12345",
       "id": 1
+    },
+    {
+      "username": "jonny",
+      "email": "jonny@gmail.com",
+      "password": "jonny12345",
+      "confirmPassword": "jonny12345",
+      "id": 2
+    }
+  ],
+  "Books": [
+    {
+      "id": 1,
+      "title": "Game Of Thrones",
+      "author": "G.G. Martin",
+      "price": 20,
+      "type": "novels",
+      "img": "assets/img/got.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Death Note",
+      "author": "Tsugumi Ōba",
+      " price": 14,
+      "type": "manga",
+      "img": "assets/img/dn.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Nel Segno della Pecora",
+      "author": "Murakami",
+      "price": 61,
+      "type": "novels",
+      "img": "assets/img/murakami.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Slum Dank",
+      "author": "Takehiko Inoue",
+      "price": 73,
+      "type": "manga",
+      "img": "assets/img/sd.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Uno, Nessuno e Centomila ",
+      "author": "Pirandello",
+      " price": 76,
+      "type": "novels",
+      " img": "assets/img/unc.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Nel Segno della Pecora",
+      "author": "Murakami",
+      "price": 61,
+      "type": "novels",
+      "img": "assets/img/murakami.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Slum Dank",
+      "author": "Takehiko Inoue",
+      "price": 73,
+      "type": "manga",
+      "img": "assets/img/sd.jpg"
+    },
+    {
+      "id": 1,
+      "title": "Game Of Thrones",
+      "author": "G.G. Martin",
+      "price": 20,
+      "type": "novels",
+      "img": "assets/img/got.jpg"
     }
   ],
   "profile": {

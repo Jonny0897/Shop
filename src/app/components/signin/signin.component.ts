@@ -46,9 +46,7 @@ export class SigninComponent implements OnInit {
         Validators.required,
         Validators.minLength(8),
       ])
-    },
-      /*Validators: this.passwordValidation;*/
-    );
+    },);
   }
 
   signin(): void {

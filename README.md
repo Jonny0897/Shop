@@ -4,7 +4,9 @@ To start the app run > 'ng serve --open'.
 
 
 ##  Json server
-To start Json server run >  npm install -g json-server > json-server --watch db.json
+To start Json server run >  npm install -g json-server
+
+to run the server -> json-server --watch db.json
 
 ## Backend
 Used Firebase to manage the DB
