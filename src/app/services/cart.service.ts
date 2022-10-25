@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Items } from 'src/assets/mock/items';
 
 
@@ -8,25 +10,33 @@ import { Items } from 'src/assets/mock/items';
 export class CartService {
 
   products: Items[] = [];
+  url: string = "http://localhost:3000/Cart";
 
-  constructor() {}
+  constructor(
+    private http: HttpClient
+  ) {}
 
-  addToCart(product: Items) {
-    this.products.push(product);
+  addToCart(book: Items) {
+    if (book.stock) {
+      this.http.post(this.url, book)
+        .subscribe({
+          next: (v) => {
+            alert("Product is Added");
+          }
+        });
+    } else {
+      alert("Product out of stock");
+    }
   }
 
-  clearCart() {
-    return this.products = [];
+  // clearCart() {
+  //   this.http.delete<any>(this.url)
+  //   .subscribe(
+  //     res => res.
+  //   );
+  // }
+
+  removeFromCart() {
+    this.http.delete<any>(this.url).subscribe();
   }
-
-  removeFromCart(product : Items) {
-    this.products.filter(p => p !== product);
-    console.log(this.products);
-  }
-
-  getProducts(){
-    return this.products;
-  }
-
-
 }

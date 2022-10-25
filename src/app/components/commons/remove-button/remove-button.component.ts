@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
+import { Items } from 'src/assets/mock/items';
 
 @Component({
   selector: 'remove-button',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RemoveButtonComponent implements OnInit {
 
-  constructor() { }
+  @Output()
+  bookRemoved: EventEmitter<Items> = new EventEmitter<Items>();
+
+  constructor(
+    private cartService: CartService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  remove() {
+    this.cartService.removeFromCart();
   }
 
 }

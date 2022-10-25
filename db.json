@@ -27,65 +27,120 @@
       "id": 1,
       "title": "Game Of Thrones",
       "author": "G.G. Martin",
-      "price": 20,
+      "price": 22.99,
       "type": "novels",
-      "img": "assets/img/got.jpg"
+      "img": "assets/img/got.jpg",
+      "stock": true
     },
     {
       "id": 2,
       "title": "Death Note",
       "author": "Tsugumi Ōba",
-      " price": 14,
+      "price": 5.5,
       "type": "manga",
-      "img": "assets/img/dn.jpg"
+      "img": "assets/img/dn.jpg",
+      "stock": true
     },
     {
       "id": 3,
       "title": "Nel Segno della Pecora",
       "author": "Murakami",
-      "price": 61,
+      "price": 12.5,
       "type": "novels",
-      "img": "assets/img/murakami.jpg"
+      "img": "assets/img/murakami.jpg",
+      "stock": true
     },
     {
       "id": 4,
       "title": "Slum Dank",
       "author": "Takehiko Inoue",
-      "price": 73,
+      "price": 5.5,
       "type": "manga",
-      "img": "assets/img/sd.jpg"
+      "img": "assets/img/sd.jpg",
+      "stock": false
     },
     {
       "id": 5,
       "title": "Uno, Nessuno e Centomila ",
       "author": "Pirandello",
-      " price": 76,
+      "price": 9.99,
       "type": "novels",
-      " img": "assets/img/unc.jpg"
+      " img": "assets/img/unc.jpg",
+      "stock": false
     },
     {
       "id": 6,
       "title": "Nel Segno della Pecora",
       "author": "Murakami",
-      "price": 61,
+      "price": 12.5,
       "type": "novels",
-      "img": "assets/img/murakami.jpg"
+      "img": "assets/img/murakami.jpg",
+      "stock": true
     },
     {
       "id": 4,
       "title": "Slum Dank",
       "author": "Takehiko Inoue",
-      "price": 73,
+      "price": 5.5,
       "type": "manga",
-      "img": "assets/img/sd.jpg"
+      "img": "assets/img/sd.jpg",
+      "stock": false
     },
     {
       "id": 1,
       "title": "Game Of Thrones",
       "author": "G.G. Martin",
-      "price": 20,
+      "price": 22.99,
       "type": "novels",
-      "img": "assets/img/got.jpg"
+      "img": "assets/img/got.jpg",
+      "stock": true
+    }
+  ],
+  "Cart": [
+    {
+      "id": 2,
+      "title": "Death Note",
+      "author": "Tsugumi Ōba",
+      "price": 5.5,
+      "type": "manga",
+      "img": "assets/img/dn.jpg",
+      "stock": true
+    },
+    {
+      "id": 1,
+      "title": "Game Of Thrones",
+      "author": "G.G. Martin",
+      "price": 22.99,
+      "type": "novels",
+      "img": "assets/img/got.jpg",
+      "stock": true
+    },
+    {
+      "id": 3,
+      "title": "Nel Segno della Pecora",
+      "author": "Murakami",
+      "price": 12.5,
+      "type": "novels",
+      "img": "assets/img/murakami.jpg",
+      "stock": true
+    },
+    {
+      "id": 4,
+      "title": "Slum Dank",
+      "author": "Takehiko Inoue",
+      "price": 5.5,
+      "type": "manga",
+      "img": "assets/img/sd.jpg",
+      "stock": false
+    },
+    {
+      "id": 6,
+      "title": "Nel Segno della Pecora",
+      "author": "Murakami",
+      "price": 12.5,
+      "type": "novels",
+      "img": "assets/img/murakami.jpg",
+      "stock": true
     }
   ],
   "profile": {

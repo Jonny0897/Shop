@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
   selector:'app-signin',
@@ -19,7 +20,8 @@ export class SigninComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private router: Router,
-    private titlePage: Title
+    private titlePage: Title,
+    private firestore: AngularFirestore
   ) {
     this.titlePage.setTitle("Sing In");
    }
@@ -51,7 +53,7 @@ export class SigninComponent implements OnInit {
 
   signin(): void {
     this.loading = true;
-    this.http.post<any>("http://localhost:3000/Users", this.signinForm.value)
+    this.http.post<any>("https://shop-351b7-default-rtdb.europe-west1.firebasedatabase.app/users.json", this.signinForm.value)
       .subscribe({
         next: (v) => {
           this.signinForm.reset();

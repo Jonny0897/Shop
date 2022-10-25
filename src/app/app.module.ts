@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { environment } from 'src/environments/environment';
+import { environment } from '../environments/environment';
 import {AngularFireModule} from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
@@ -51,8 +51,6 @@ import { HomeCartComponent } from './pages/home-cart/home-cart.component';
     AngularFireModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
-    provideAuth(() => getAuth()),
-
   ],
   providers: [],
   bootstrap: [AppComponent]

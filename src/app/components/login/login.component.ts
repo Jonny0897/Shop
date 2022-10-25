@@ -3,6 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { Users } from 'src/interface/users';
 
 
 
@@ -36,23 +37,24 @@ export class LoginComponent implements OnInit {
     })
   }
 
-  login(): void {
+  login() {
     this.loading = true;
-    this.http.get<any>("http://localhost:3000/Users")
-    .subscribe( res=> {
-      const user = res.find((u:any) => {
-        return u.email === this.loginForm.value.email && u.password === this.loginForm.value.password;
-      });
-      if (user) {
-        alert("Success Log In");
-        this.loginForm.reset();
-        this.router.navigate(['home'])
-      } else {
-        alert("User not Found");
-      }
-    }, err =>{
-      alert("something went wrong");
-    })
+    this.http.get<any>("https://shop-351b7-default-rtdb.europe-west1.firebasedatabase.app/users.json")
+    .subscribe();
+    // .subscribe( res=> {
+    //   const user = res.find((u:Users) => {
+    //     return u.email === this.loginForm.value.email && u.password === this.loginForm.value.password;
+    //   });
+    //   if (user) {
+    //     alert("Success Log In");
+    //     this.loginForm.reset();
+    //     this.router.navigate(['home'])
+    //   } else {
+    //     alert("User not Found");
+    //   }
+    // }, err =>{
+    //   alert("something went wrong");
+    // })
   }
 
   get email() {

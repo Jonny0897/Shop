@@ -5,4 +5,5 @@ export interface Items{
     price: number;
     type: string;
     img: string;
+    stock: boolean;
 }

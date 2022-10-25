@@ -11,6 +11,8 @@ export class FiltersComponent implements OnInit {
   @Input() novels: number = 0;
   @Input() manga: number = 0;
 
+  @Output()
+  filterRadioChanged: EventEmitter<string> = new EventEmitter<string>();
 
   selectedRadioButtonValue: string = 'all';
 
@@ -19,8 +21,6 @@ export class FiltersComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Output()
-  filterRadioChanged: EventEmitter<string> = new EventEmitter<string>();
 
   onRadioChanged() {
     this.filterRadioChanged.emit(this.selectedRadioButtonValue);

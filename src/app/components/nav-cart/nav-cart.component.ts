@@ -21,10 +21,13 @@ export class NavCartComponent implements OnInit {
   }
 
   getData(): Items[] {
-    this.http.get<any>("http://localhost:3000/Books")
+    this.http.get<any>("http://localhost:3000/Cart")
       .subscribe(res => {
         this.books = res;
-      })
+      },
+      err => {
+        alert("Something wen wrong");
+      });
     return this.books;
   }
 
@@ -35,7 +38,7 @@ export class NavCartComponent implements OnInit {
   totalPrice(): number {
     let tot: number = 0;
     this.books.filter(i => tot = i.price + tot);
-    return tot;
+    return Math.floor(tot * 100) / 100;
   }
 
 }
