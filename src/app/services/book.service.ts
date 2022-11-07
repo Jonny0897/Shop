@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/compat/database';
 import { Observable } from 'rxjs';
 import { Items } from 'src/assets/mock/items';
 
@@ -8,13 +9,17 @@ import { Items } from 'src/assets/mock/items';
 })
 export class BookService {
 
+  node:AngularFireList<Items>;
+
   constructor(
-    private http: HttpClient
-  ) { }
+    private db: AngularFireDatabase,
+    private http: HttpClient,
+  ) {
+    this.node = this.db.list("books");
+   }
 
   getBook(): Observable<Items[]> {
-    return this.http.get<Items[]>("https://shop-351b7-default-rtdb.europe-west1.firebasedatabase.app/books.json");
+    return this.node.valueChanges();
   }
-
 
 }

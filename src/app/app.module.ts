@@ -21,8 +21,10 @@ import { MainHomeComponent } from './components/main-home/main-home.component';
 import { NavCartComponent } from './components/nav-cart/nav-cart.component';
 import { BackgroundHoverDirective } from './directives/background-hover.directive';
 import { SelectComponent } from './components/commons/select/select.component';
-import { RemoveButtonComponent } from './components/commons/remove-button/remove-button.component';
 import { HomeCartComponent } from './pages/home-cart/home-cart.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,6 @@ import { HomeCartComponent } from './pages/home-cart/home-cart.component';
     NavCartComponent,
     BackgroundHoverDirective,
     SelectComponent,
-    RemoveButtonComponent,
     HomeCartComponent
   ],
   imports: [
@@ -51,6 +52,9 @@ import { HomeCartComponent } from './pages/home-cart/home-cart.component';
     AngularFireModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideDatabase(() => getDatabase()),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [],
   bootstrap: [AppComponent]

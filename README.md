@@ -13,7 +13,8 @@ Used Firebase to manage the DB
 
 <!-- SetUp FireBase: -->
                 login to Firebase -> cmd: firebase login
-                cmd: ng add @angular/fire
+                cmd: ng add @angular/fire *** ng add @angular/fire
+
 
 environments.ts:
                 add the variable object "firebase". This object is on settings of console.firebase

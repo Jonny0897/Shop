@@ -10,7 +10,7 @@ import { Items } from 'src/assets/mock/items';
 })
 export class NavCartComponent implements OnInit {
 
-  books: Items[] = this.getData();
+  books: Items[] = [];
 
   constructor(
     private cartService: CartService,
@@ -18,18 +18,14 @@ export class NavCartComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.cartService.getCart().subscribe(data => {
+      this.books = data;
+    });
   }
 
-  getData(): Items[] {
-    this.http.get<any>("http://localhost:3000/Cart")
-      .subscribe(res => {
-        this.books = res;
-      },
-      err => {
-        alert("Something wen wrong");
-      });
-    return this.books;
-  }
+  // getData(): Items[] {
+  //  return this.cartService.getCart();
+  // }
 
   hiddenTotal(): boolean {
     return this.books.length != 0;
@@ -39,6 +35,10 @@ export class NavCartComponent implements OnInit {
     let tot: number = 0;
     this.books.filter(i => tot = i.price + tot);
     return Math.floor(tot * 100) / 100;
+  }
+
+  remove(book: Items): void {
+    
   }
 
 }

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/compat/database';
 import { Observable } from 'rxjs';
 import { Items } from 'src/assets/mock/items';
 
@@ -10,33 +11,35 @@ import { Items } from 'src/assets/mock/items';
 export class CartService {
 
   products: Items[] = [];
-  url: string = "http://localhost:3000/Cart";
+  node:AngularFireList<Items>;
 
   constructor(
-    private http: HttpClient
-  ) {}
+    private http: HttpClient,
+    private db: AngularFireDatabase
+  ) {
+    this.node = this.db.list("cart");
+   }
 
   addToCart(book: Items) {
     if (book.stock) {
-      this.http.post(this.url, book)
-        .subscribe({
-          next: (v) => {
-            alert("Product is Added");
-          }
-        });
-    } else {
-      alert("Product out of stock");
+      this.node.push(book).then((resp) => {
+        console.log("added");
+      }, )
     }
   }
 
-  // clearCart() {
-  //   this.http.delete<any>(this.url)
-  //   .subscribe(
-  //     res => res.
-  //   );
-  // }
-
-  removeFromCart() {
-    this.http.delete<any>(this.url).subscribe();
+  getCart(): Observable<Items[]> {
+    return this.node.valueChanges();
   }
-}
+
+  clearCart() {
+    this.node.remove().then(resp => {
+      alert("cleared");
+    });
+  }
+
+
+
+    // return this.http.delete<Items[]>("https://shop-351b7-default-rtdb.europe-west1.firebasedatabase.app/cart" + id + ".json");
+  }
+

@@ -1,7 +1,6 @@
 <div class="container">
     <div class="filter">
-        <app-filters [all]="getAllBook()" [novels]="getNovels()" [manga]="getManga()"
-            (filterRadioChanged)="onFilterRadioChanged($event)">
+        <app-filters (filterRadioChanged)="onFilterRadioChanged($event)">
         </app-filters>
     </div>
     <div class="products container">
@@ -16,17 +15,19 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="details-item">
-                                        <h4 class="details d-flex justify-content-start text-truncate"> {{item.title}} </h4>
+                                        <h4 class="details d-flex justify-content-start text-truncate"> {{item.title}}
+                                        </h4>
                                         <span>
-                                             di <h6 class="list-inline-item">{{item.author}}</h6>
+                                            di <h6 class="list-inline-item">{{item.author}}</h6>
                                         </span>
                                         <h5 class="details"> {{ item.price + "€"}} </h5>
                                     </div>
                                     <div class="buttons container">
                                         <div class="row justify-content-between">
-                                            <button class="btn btn-add col-5" type="button" (click)="addToCart(item)" [appBackgroundHover]="'#80c5f7'"> Buy </button>
+                                            <button class="btn btn-add col-5" type="button" (click)="addToCart(item)"
+                                                [appBackgroundHover]="'#80c5f7'"> Buy </button>
                                             <button class="btn btn-show shadow-none col-5" type="button"> Show </button>
-                                         </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -37,4 +38,3 @@
         </div>
     </div>
 </div>
-

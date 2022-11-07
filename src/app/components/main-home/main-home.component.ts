@@ -1,9 +1,12 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Items } from 'src/assets/mock/items';
 import { CartService } from 'src/app/services/cart.service';
 import { HttpClient } from '@angular/common/http';
 import { BookService } from 'src/app/services/book.service';
-import { map } from 'rxjs/operators';
+import { map, Subject } from 'rxjs';
+import { databaseInstance$ } from '@angular/fire/database';
+import { query, where } from 'firebase/firestore';
+import { isValidTimestamp } from '@firebase/util';
 
 @Component({
   selector: 'app-main-home',
@@ -12,37 +15,38 @@ import { map } from 'rxjs/operators';
 })
 export class MainHomeComponent implements OnInit {
 
+  error = new Subject<string>();
   bookFilters: string = 'all';
   filterBook: Items[] = [];
-  books: Items[] = this.getData();
-  collection: Items[] = [];
+  books: Items[] = [];
 
   constructor(
     private booksService: BookService,
     private cartService: CartService,
-    private http: HttpClient
   ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.books = this.getData();
+    console.log(this.getNovel());
+  }
 
-  fetch(): Items[] {
-    const collection: Items[] = [];
-    this.booksService.getBook()
-    .subscribe(
-      data =>  {
-        for( var book of data ) {
-          collection.push(book);
-        }
-      }
-    );
-    return collection;
+  getManga(): number {
+    let length: number = 0;
+      this.cartService.getCart().subscribe(
+      data => data.filter(Book => Book.type === "manga").length
+    )
+    return length;
   }
 
   getData(): Items[] {
-    this.http.get<any>("http://localhost:3000/Books")
+    this.booksService.getBook()
       .subscribe(res => {
         this.books = res;
-      })
+      },
+        (err) => {
+          this.error.next(err.message);
+        }
+      );
     return this.books;
   }
 
@@ -50,20 +54,26 @@ export class MainHomeComponent implements OnInit {
     return this.books.length;
   }
 
-  getNovels() {
-    return this.books.filter(Book => Book.type == "novels").length;
+  getNovel(): number {
+    let length: number = 0;
+    this.booksService.getBook().subscribe(
+      data => data.filter(Book => Book.type === "manga").length
+    )
+    return length;
   }
 
-  getManga() {
-    return this.books.filter(Book => Book.type == "manga").length;
+  getNovels(): number {
+    return 0;
   }
+
+
 
   onFilterRadioChanged(dataFilter: string) {
     return this.bookFilters = dataFilter;
   }
 
-  addToCart(Book: Items) {
-    this.cartService.addToCart(Book);
+  addToCart(book: Items) {
+    this.cartService.addToCart(book);
   }
 
 }

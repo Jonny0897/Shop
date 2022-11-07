@@ -19,6 +19,7 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+    "express": "^4.18.2",
     "firebase": "^9.12.1",
     "rxjs": "~7.5.0",
     "zone.js": "~0.11.4"
@@ -36,5 +37,17 @@
     "karma-jasmine-html-reporter": "~1.7.0",
     "tslib": "^2.4.0",
     "typescript": "~4.7.2"
-  }
+  },
+  "description": "Make sure that you have at least Node.js: 16.15.1\r To start the app run > 'ng serve --open'.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonny0897/Shop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jonny0897/Shop/issues"
+  },
+  "homepage": "https://github.com/Jonny0897/Shop#readme"
 }
